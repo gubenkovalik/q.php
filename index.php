@@ -20,8 +20,6 @@ switch($host){
 
 $ip = gethostbyname($host);
 
-echo "<h1>This is server with IP $ip, worker domain: $domain, <br/> Location: $location</h1>";
-echo "Server var: ";
-echo "<pre>";
-print_r($_SERVER);
+echo "<h1>This is server with IP $ip<br/>Worker domain: $domain<br/> Location: $location</h1>";
+
 
