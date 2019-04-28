@@ -3,7 +3,7 @@ $host= gethostname();
 switch($host){
 
 }
-$c = curl_init("https://2ip.ru");
+$c = curl_init("http://2ip.ru");
 curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
 $r = curl_exec($c);
 
