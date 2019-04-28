@@ -1,18 +1,26 @@
 <?php
 $host= gethostname();
+$ip = "";
+$domain = "";
+$location = "";
+
 switch($host){
-
+    case "q-php-a":
+        $domain = "a.php.q.jencat.pro";
+        $ip = gethostbyname($domain);
+        $location = "Minato City, Tokyo, Japan";
+        break;
+    case "q-php-b":
+        $domain = "b.php.q.jencat.pro";
+        $ip = gethostbyname($domain);
+        $location = "Berkeley County, S.C, USA";
 }
-$c = curl_init("http://2ip.ru");
-curl_setopt($c, CURLOPT_RETURNTRANSFER, 1);
-$r = curl_exec($c);
 
-$ipaddr = $r;
 
 
 $ip = gethostbyname($host);
 
-echo "<h1>This is server with IP $ipaddr</h1>";
+echo "<h1>This is server with IP $ip, worker domain: $domain, <br/> Location: $location</h1>";
 echo "Server var: ";
 echo "<pre>";
 print_r($_SERVER);
